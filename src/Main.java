@@ -1,22 +1,28 @@
 public class Main {
     public static void main(String[] args) {
-
-        int bonus = 50; // бонусные рубли
-
+        int limitBonus = 100; // 1 бонусный рубль
         int onTheAccount = 250; // начальный счет
         int replenishment = 300; // бонусов нет
-        int replenishment1 = 450; // бонусы начисляются
-        // Объявляете переменные для входных данных и
-        // параметров программы: начального счёта,
-        // суммы пополнения и тп
-        if (replenishment >400)
-            replenishment= replenishment + bonus;
-        if (replenishment1 >400)
-            replenishment1= replenishment1 + bonus;
+        int replenishment1 = 1450; // бонусы начисляются
+        int bonus;
+
+        if (replenishment < 1000) {
+            bonus = (replenishment / limitBonus);
+        } else {
+            bonus = 0;
+        }
+        if (replenishment1 >= 1000) {
+            bonus = (replenishment1 / limitBonus);
+
+        } else {
+            bonus = 0;
+
+        }
 
         System.out.println("Пополненный счет без начисленных бонусов");
         System.out.println(onTheAccount + replenishment);
         System.out.println("Пополненный счет с начисленными бонусами");
-        System.out.println(onTheAccount + replenishment1);
+        System.out.println(onTheAccount + replenishment1 + bonus);
+
     }
 }
