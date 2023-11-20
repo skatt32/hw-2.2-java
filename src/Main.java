@@ -15,6 +15,8 @@ public class Main {
 
         System.out.println("Пополненный счет с начисленными бонусами");
         System.out.println(onTheAccount + replenishment + bonus);
+        System.out.println("Количество начисленных бонусов");
+        System.out.println(bonus);
 
     }
 }
